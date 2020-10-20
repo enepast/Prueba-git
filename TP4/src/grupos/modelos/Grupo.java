@@ -22,22 +22,22 @@ public class Grupo
         this.miembrosEnGrupo = miembrosEnGrupo;
     }
 
-    public String verNombre() 
+    public String getNombre() 
     {
         return nombre;
     }
 
-    public void asignarNombre(String nombre) 
+    public void setNombre(String nombre) 
     {
         this.nombre = nombre;
     }
 
-    public String verDescripcion() 
+    public String getDescripcion() 
     {
         return descripcion;
     }
 
-    public void asignarDescripcion(String descripcion) 
+    public void setDescripcion(String descripcion) 
     {
         this.descripcion = descripcion;
     }
@@ -85,13 +85,13 @@ public class Grupo
         miembro.quitarGrupo(this);
     }
     
-    public void verMiembros () 
+    public void getMiembros () 
     {
         System.out.println("Miembros:");
         for (MiembroEnGrupo meg : miembrosEnGrupo) 
         {
-            System.out.println(meg.verAutor().getApellidos() + ", " + meg.verAutor().getNombres());
-            System.out.println(meg.verRol());
+            System.out.println(meg.getAutor().getApellidos() + ", " + meg.getAutor().getNombres());
+            System.out.println(meg.getRol());
         }
     }
     
@@ -121,8 +121,8 @@ public class Grupo
     
     public void mostrar () 
     {
-        System.out.println("Grupo: " + this.verNombre());
-        System.out.println("Descripcion " + this.verDescripcion());
-        this.verMiembros();
+        System.out.println("Grupo: " + this.getNombre());
+        System.out.println("Descripcion " + this.getDescripcion());
+        this.getMiembros();
     }
 }

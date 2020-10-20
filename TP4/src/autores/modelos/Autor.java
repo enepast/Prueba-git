@@ -133,8 +133,8 @@ public abstract class Autor
         System.out.println("Grupos:");
         for (MiembroEnGrupo meg : miembroEnGrupos) 
         {
-            System.out.println(meg.verGrupo().verNombre() + ", " +meg.verGrupo().verDescripcion());
-            System.out.println(meg.verRol());
+            System.out.println(meg.getGrupo().getNombre() + ", " +meg.getGrupo().getDescripcion());
+            System.out.println(meg.getRol());
         }
     }
     

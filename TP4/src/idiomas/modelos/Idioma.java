@@ -9,12 +9,12 @@ public class Idioma
         this.nombre = nombre;
     }
     
-    public String verNombre() 
+    public String getNombre() 
     {
         return nombre;
     }
 
-    public void asignarNombre(String nombre) 
+    public void setNombre(String nombre) 
     {
         this.nombre = nombre;
     }

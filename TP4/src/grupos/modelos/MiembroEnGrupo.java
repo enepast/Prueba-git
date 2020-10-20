@@ -28,32 +28,32 @@ public class MiembroEnGrupo
         this.rol = rol;
     }
 
-    public Rol verRol() 
+    public Rol getRol() 
     {
         return rol;
     }
 
-    public void asignarRol(Rol rol) 
+    public void setRol(Rol rol) 
     {
         this.rol = rol;
     }
 
-    public Autor verAutor() 
+    public Autor getAutor() 
     {
         return autor;
     }
 
-    public void asignarAutor(Autor autor) 
+    public void setAutor(Autor autor) 
     {
         this.autor = autor;
     }
 
-    public Grupo verGrupo() 
+    public Grupo getGrupo() 
     {
         return grupo;
     }
 
-    public void asignarGrupo(Grupo grupo) 
+    public void setGrupo(Grupo grupo) 
     {
         this.grupo = grupo;
     }
