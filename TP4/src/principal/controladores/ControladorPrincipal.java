@@ -44,7 +44,7 @@ public class ControladorPrincipal
         Grupo grupo4 = new Grupo("Grupo 4", "Descripcion 4");
         Grupo grupo5 = new Grupo("Grupo 5", "Descripcion 5");
         Grupo grupo6 = new Grupo("Grupo 6", "Descripcion 6");
-        Grupo grupo7 = new Grupo("Grupo 4", "Descripcion 6");//No esta usada
+        Grupo grupo7 = new Grupo("Grupo 4", "Descripcion 6");
         
         if (!grupos.contains(grupo1)) grupos.add(grupo1);
         if (!grupos.contains(grupo2)) grupos.add(grupo2);
@@ -52,6 +52,7 @@ public class ControladorPrincipal
         if (!grupos.contains(grupo4)) grupos.add(grupo4);
         if (!grupos.contains(grupo5)) grupos.add(grupo5);
         if (!grupos.contains(grupo6)) grupos.add(grupo6);
+        if (!grupos.contains(grupo7)) grupos.add(grupo7); //Veo que pasa si hay un grupo con igual nombre
         
         System.out.println("----Grupos----");
         for(Grupo g : grupos)
@@ -64,15 +65,17 @@ public class ControladorPrincipal
         Autor alumno3 = new Alumno(3, "Apellido3", "Nombre3", "Clave3", "3");
         Autor alumno4 = new Alumno(4, "Apellido4", "Nombre4", "Clave4", "4");
         Autor alumno5 = new Alumno(5, "Apellido5", "Nombre5", "Clave5", "5");
-        Autor alumno6 = new Alumno(5, "Apellido5", "Nombre5", "Clave5", "5");
-
+        Autor alumno6 = new Alumno(5, "Apellido5", "Nombre5", "Clave5", "5"); //Alumno que repite DNI
+        Autor alumno7 = new Alumno(6,"ApellidoCxRepetido","NombreCxRepetido","ClaveCxRepetido","1");
+        
         if (!autores.contains(alumno1)) autores.add(alumno1);
         if (!autores.contains(alumno2)) autores.add(alumno2);
         if (!autores.contains(alumno3)) autores.add(alumno3);
         if (!autores.contains(alumno4)) autores.add(alumno4);
         if (!autores.contains(alumno5)) autores.add(alumno5);
         if (!autores.contains(alumno6)) autores.add(alumno6);
-        
+        if (!autores.contains(alumno7)) autores.add(alumno7);
+       
 //        System.out.println("\n----Alumnos----\n");
 //        for(Alumno a : alumnos)
 //            a.mostrar();
@@ -83,14 +86,15 @@ public class ControladorPrincipal
         Autor profesor3 = new Profesor(30, "Apellido30", "Nombre30", "Clave30", Cargo.ADJUNTO);
         Autor profesor4 = new Profesor(40, "Apellido40", "Nombre40", "Clave40", Cargo.JTP);
         Autor profesor5 = new Profesor(50, "Apellido50", "Nombre50", "Clave50", Cargo.ADG);
-        Autor profesor6 = new Profesor(50, "asdasdasd", "Nombre40", "Clave40", Cargo.JTP);
-        
+        Autor profesor6 = new Profesor(50, "asdasdasd", "Nombre40", "Clave40", Cargo.JTP); //Profesor que repite DNI
+        Autor profesor7 = new Profesor(1,"ApellidoDNIRepetido","NombreDNIRepetido","ClaveDNIRepetido",Cargo.ADG); //Profesor que repite DNI con alumno
         if (!autores.contains(profesor1)) autores.add(profesor1);
         if (!autores.contains(profesor2)) autores.add(profesor2);
         if (!autores.contains(profesor3)) autores.add(profesor3);
         if (!autores.contains(profesor4)) autores.add(profesor4);
         if (!autores.contains(profesor5)) autores.add(profesor5);
         if (!autores.contains(profesor6)) autores.add(profesor6);
+        if (!autores.contains(profesor7)) autores.add(profesor7);
         
 //        System.out.println("\n----Profesores----\n");
 //        for(Profesor p : profesores)
@@ -104,8 +108,6 @@ public class ControladorPrincipal
         }
         //PROFESORES
         
-        
-        
         //TIPOS DE PUBLICACION
         System.out.println("\n----Tipos de publicación----\n");
         Tipo tipo1 = new Tipo("Tipo 1");
@@ -113,12 +115,14 @@ public class ControladorPrincipal
         Tipo tipo3 = new Tipo("Tipo 3");
         Tipo tipo4 = new Tipo("Tipo 4");
         Tipo tipo5 = new Tipo("Tipo 5");
+        Tipo tipo6 = new Tipo("Tipo 5");//Tipo con nombre duplicado
         
         if (!tipos.contains(tipo1)) tipos.add(tipo1);
         if (!tipos.contains(tipo2)) tipos.add(tipo2);
         if (!tipos.contains(tipo3)) tipos.add(tipo3);
         if (!tipos.contains(tipo4)) tipos.add(tipo4);
         if (!tipos.contains(tipo5)) tipos.add(tipo5);
+        if (!tipos.contains(tipo6)) tipos.add(tipo6);
 
         for(Tipo t : tipos)
             System.out.println(t);
@@ -134,15 +138,17 @@ public class ControladorPrincipal
         Lugar lugar3 = new Lugar("Lugar 3");
         Lugar lugar4 = new Lugar("Lugar 4");
         Lugar lugar5 = new Lugar("Lugar 5");
+        Lugar lugar6 = new Lugar("Lugar 5"); //lugar repetido
 
         if (!lugares.contains(lugar1)) lugares.add(lugar1);
         if (!lugares.contains(lugar2)) lugares.add(lugar2);
         if (!lugares.contains(lugar3)) lugares.add(lugar3);
         if (!lugares.contains(lugar4)) lugares.add(lugar4);
         if (!lugares.contains(lugar5)) lugares.add(lugar5);
+        if (!lugares.contains(lugar6)) lugares.add(lugar6);
 
-        for(Lugar l : lugares)
-            System.out.println(l);
+        for(Lugar lug : lugares)
+            System.out.println(lug);
         //LUGAR
         
         
@@ -156,12 +162,14 @@ public class ControladorPrincipal
         Idioma idioma3 = new Idioma("Idioma 3");
         Idioma idioma4 = new Idioma("Idioma 4");
         Idioma idioma5 = new Idioma("Idioma 5");
+        Idioma idioma6 = new Idioma("Idioma 5"); //idioma repetido
 
         if (!idiomas.contains(idioma1)) idiomas.add(idioma1);
         if (!idiomas.contains(idioma2)) idiomas.add(idioma2);
         if (!idiomas.contains(idioma3)) idiomas.add(idioma3);
         if (!idiomas.contains(idioma4)) idiomas.add(idioma4);
         if (!idiomas.contains(idioma5)) idiomas.add(idioma5);
+        if (!idiomas.contains(idioma6)) idiomas.add(idioma6);
 
         for(Idioma i : idiomas)
             System.out.println(i);        
@@ -177,7 +185,7 @@ public class ControladorPrincipal
         PalabraClave palabraClave3 = new PalabraClave("PalabraClave3");
         PalabraClave palabraClave4 = new PalabraClave("PalabraClave4");
         PalabraClave palabraClave5 = new PalabraClave("PalabraClave5");
-        PalabraClave palabraClave6 = new PalabraClave("PalabraClave6");
+        PalabraClave palabraClave6 = new PalabraClave("PalabraClave5"); //Palabra clave repetida
         
         if (!palabrasClaves.contains(palabraClave1)) palabrasClaves.add(palabraClave1);
         if (!palabrasClaves.contains(palabraClave2)) palabrasClaves.add(palabraClave2);
@@ -185,6 +193,7 @@ public class ControladorPrincipal
         if (!palabrasClaves.contains(palabraClave4)) palabrasClaves.add(palabraClave4);
         if (!palabrasClaves.contains(palabraClave5)) palabrasClaves.add(palabraClave5);
         if (!palabrasClaves.contains(palabraClave6)) palabrasClaves.add(palabraClave6);
+        
         
         for(PalabraClave pc : palabrasClaves)
             System.out.println(pc); 
@@ -205,24 +214,6 @@ public class ControladorPrincipal
         
         //PUBLICACIONES
         
-        
-        
-        
-        //AUTORES
-        if (!autores.contains(profesor1)) autores.add(profesor1);
-        if (!autores.contains(profesor2)) autores.add(profesor2);
-        if (!autores.contains(profesor3)) autores.add(profesor3);
-        if (!autores.contains(profesor4)) autores.add(profesor4);
-        if (!autores.contains(profesor5)) autores.add(profesor5);
-        if (!autores.contains(profesor6)) autores.add(profesor6);
-        if (!autores.contains(alumno1)) autores.add(alumno1);
-        if (!autores.contains(alumno2)) autores.add(alumno2);
-        if (!autores.contains(alumno3)) autores.add(alumno3);
-        if (!autores.contains(alumno4)) autores.add(alumno4);
-        if (!autores.contains(alumno5)) autores.add(alumno5);
-        if (!autores.contains(alumno6)) autores.add(alumno6);
-        
-          System.out.println("\n----Autores----\n");
         for(Autor a : autores)
             a.mostrar();
         //PUBLICACION 1
@@ -254,7 +245,7 @@ public class ControladorPrincipal
         //PUBLICACION 3
         
         //PUBLICACION 4
-        MiembroEnGrupo mg4 = new MiembroEnGrupo(profesores.get(3), grupos.get(3), Rol.COLABORADOR);
+        MiembroEnGrupo mg4 = new MiembroEnGrupo(autores.get(3), grupos.get(3), Rol.COLABORADOR);
         LocalDate fecha4= LocalDate.of(2020, 03, 15);
         ArrayList<PalabraClave> palabras4=new ArrayList<>();
         palabras4.add(palabrasClaves.get(1));
@@ -262,7 +253,7 @@ public class ControladorPrincipal
         //PUBLICACION 4
         
         //PUBLICACION 5
-        MiembroEnGrupo mg5 = new MiembroEnGrupo(profesores.get(4), grupos.get(4), Rol.COLABORADOR);
+        MiembroEnGrupo mg5 = new MiembroEnGrupo(autores.get(4), grupos.get(4), Rol.COLABORADOR);
         LocalDate fecha5= LocalDate.of(2020, 8, 15);
         ArrayList<PalabraClave> palabras5=new ArrayList<>();
         palabras5.add(palabrasClaves.get(2));
@@ -292,7 +283,6 @@ public class ControladorPrincipal
             System.out.println();
         }
         
-        //PROFESORES
       //</editor-fold>   
 //     <editor-fold defaultstate="collapsed" desc="Intefaz gráfica"> 
         VentanaAMGrupo ventanaGrupo = new VentanaAMGrupo(null); //se instancia la ventana
