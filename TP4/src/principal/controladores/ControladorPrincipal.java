@@ -283,35 +283,81 @@ public class ControladorPrincipal
             System.out.println();
         }
         
+        /////////Pruebas de parte 3 del TP 4
+        
+        //1) Autores repetidos en un grupo--->Funciona
+        
+        System.out.println("----Agrego miembros");
+        grupo1.agregarMiembro(profesor1, Rol.ADMINISTRADOR);
+        grupo1.agregarMiembro(profesor1, Rol.COLABORADOR); //repetido
+        grupo1.agregarMiembro(alumno1, Rol.COLABORADOR);
+        grupo1.mostrar();
+        
+        
+        //2) Autor anterior agregado a otro grupo--->Funciona
+        
+        System.out.println("\n----Agrego autores de dif grupos");
+        profesor1.agregarGrupo(grupo2, Rol.COLABORADOR);
+        profesor1.agregarGrupo(grupo2, Rol.ADMINISTRADOR); //grupo repetido
+        profesor1.mostrar();
+        
+        
+        //3)Quitar un autor y verificar---->Funciona
+        System.out.println("\n----Quito miembros");
+        grupo1.quitarMiembro(profesor1);
+        grupo1.mostrar();
+        
+        //4)Grupo para superadministradores---->No funciona
+        System.out.println("\n----Grupo de superadmins");
+        Grupo grupoSuper = new Grupo("Super Administradores","Superadmins");
+        if (!grupos.contains(grupoSuper))
+            grupos.add(grupoSuper);
+        grupoSuper.agregarMiembro(profesor1, Rol.COLABORADOR);//No lo agrega como admin
+        grupoSuper.mostrar();
+        System.out.println(grupoSuper.esSuperAdministradores());        
+        
+        //5)Verificar si son grupos de super administradores---->Funciona
+        System.out.println("\n----Son grupos de Super Administradores?");
+        System.out.println("Grupo Super:");
+        System.out.println(grupoSuper.esSuperAdministradores());
+        System.out.println("Grupo 2:");
+        System.out.println(grupo2.esSuperAdministradores());
+        System.out.println("Grupo 1:");
+        System.out.println(grupo1.esSuperAdministradores());
+        
+        //6)El autor agregado a Grupo Super Administrador es SuperAdmin?---->Funciona
+        System.out.println("\n----Autor superAdmin?");
+        System.out.println("El profesor1: " +profesor1.esSuperAdministrador());
+        System.out.println("El alumno1: " +alumno1.esSuperAdministrador());
       //</editor-fold>   
 //     <editor-fold defaultstate="collapsed" desc="Intefaz gráfica"> 
-        VentanaAMGrupo ventanaGrupo = new VentanaAMGrupo(null); //se instancia la ventana
-        ventanaGrupo.setLocationRelativeTo(null); //se centra la ventana
-        ventanaGrupo.setVisible(true); //se hace visible la ventana
-        
-        VentanaAMAlumno ventanaAlumno = new VentanaAMAlumno(null); //se instancia la ventana
-        ventanaAlumno.setLocationRelativeTo(null); //se centra la ventana
-        ventanaAlumno.setVisible(true); //se hace visible la ventana
-        
-        VentanaAMProfesor ventanaProfesor = new VentanaAMProfesor(null); //se instancia la ventana
-        ventanaProfesor.setLocationRelativeTo(null); //se centra la ventana
-        ventanaProfesor.setVisible(true); //se hace visible la ventana        
-        
-        VentanaAIdioma ventanaIdioma = new VentanaAIdioma(null); //se instancia la ventana
-        ventanaIdioma.setLocationRelativeTo(null); //se centra la ventana
-        ventanaIdioma.setVisible(true); //se hace visible la ventana                
-        
-        VentanaALugar ventanaLugar = new VentanaALugar(null); //se instancia la ventana
-        ventanaLugar.setLocationRelativeTo(null); //se centra la ventana
-        ventanaLugar.setVisible(true); //se hace visible la ventana                        
-        
-        VentanaAPalabraClave ventanaPalabraClave = new VentanaAPalabraClave(null); //se instancia la ventana
-        ventanaPalabraClave.setLocationRelativeTo(null); //se centra la ventana
-        ventanaPalabraClave.setVisible(true); //se hace visible la ventana                                
-        
-        VentanaATipo ventanaTipo = new VentanaATipo(null); //se instancia la ventana
-        ventanaTipo.setLocationRelativeTo(null); //se centra la ventana
-        ventanaTipo.setVisible(true); //se hace visible la ventana   
+////        VentanaAMGrupo ventanaGrupo = new VentanaAMGrupo(null); //se instancia la ventana
+////        ventanaGrupo.setLocationRelativeTo(null); //se centra la ventana
+////        ventanaGrupo.setVisible(true); //se hace visible la ventana
+////        
+////        VentanaAMAlumno ventanaAlumno = new VentanaAMAlumno(null); //se instancia la ventana
+////        ventanaAlumno.setLocationRelativeTo(null); //se centra la ventana
+////        ventanaAlumno.setVisible(true); //se hace visible la ventana
+////        
+////        VentanaAMProfesor ventanaProfesor = new VentanaAMProfesor(null); //se instancia la ventana
+////        ventanaProfesor.setLocationRelativeTo(null); //se centra la ventana
+////        ventanaProfesor.setVisible(true); //se hace visible la ventana        
+////        
+////        VentanaAIdioma ventanaIdioma = new VentanaAIdioma(null); //se instancia la ventana
+////        ventanaIdioma.setLocationRelativeTo(null); //se centra la ventana
+////        ventanaIdioma.setVisible(true); //se hace visible la ventana                
+////        
+////        VentanaALugar ventanaLugar = new VentanaALugar(null); //se instancia la ventana
+////        ventanaLugar.setLocationRelativeTo(null); //se centra la ventana
+////        ventanaLugar.setVisible(true); //se hace visible la ventana                        
+////        
+////        VentanaAPalabraClave ventanaPalabraClave = new VentanaAPalabraClave(null); //se instancia la ventana
+////        ventanaPalabraClave.setLocationRelativeTo(null); //se centra la ventana
+////        ventanaPalabraClave.setVisible(true); //se hace visible la ventana                                
+////        
+////        VentanaATipo ventanaTipo = new VentanaATipo(null); //se instancia la ventana
+////        ventanaTipo.setLocationRelativeTo(null); //se centra la ventana
+////        ventanaTipo.setVisible(true); //se hace visible la ventana   
 
 //     </editor-fold>
     }
