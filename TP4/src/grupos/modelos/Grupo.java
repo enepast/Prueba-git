@@ -85,7 +85,7 @@ public class Grupo
         miembro.quitarGrupo(this);
     }
     
-    public void getMiembros () 
+    public void verMiembros () 
     {
         System.out.println("Miembros:");
         for (MiembroEnGrupo meg : miembrosEnGrupo) 
@@ -123,6 +123,6 @@ public class Grupo
     {
         System.out.println("Grupo: " + this.getNombre());
         System.out.println("Descripcion: " + this.getDescripcion());
-        this.getMiembros();
+        this.verMiembros();
     }
 }
