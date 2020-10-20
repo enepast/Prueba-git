@@ -165,6 +165,6 @@ public class Publicacion
            System.out.println("\t" + pc); 
         }
         System.out.println("Enlace: " + this.enlace);
-        System.out.println("Resumen" + this.resumen);
+        System.out.println("Resumen: " + this.resumen);
     } 
 }

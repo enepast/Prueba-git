@@ -122,7 +122,7 @@ public class Grupo
     public void mostrar () 
     {
         System.out.println("Grupo: " + this.getNombre());
-        System.out.println("Descripcion " + this.getDescripcion());
+        System.out.println("Descripcion: " + this.getDescripcion());
         this.getMiembros();
     }
 }
