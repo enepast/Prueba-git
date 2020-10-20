@@ -160,9 +160,9 @@ public class Publicacion
         System.out.println("Idioma: " + this.idioma);
         System.out.println("Lugar: " + this.lugar);
         System.out.println("Palabras claves\n---------------");
-        for(PalabraClave pc : palabrasClaves) 
+        for(PalabraClave palC : palabrasClaves) 
         {
-           System.out.println("\t" + pc); 
+           System.out.println("\t" + palC); 
         }
         System.out.println("Enlace: " + this.enlace);
         System.out.println("Resumen: " + this.resumen);
